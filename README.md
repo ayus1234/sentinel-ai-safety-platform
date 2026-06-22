@@ -6,43 +6,36 @@ SentinelAI is a local-first hackathon MVP for an autonomous industrial safety in
 
 The centerpiece demo replays a correlated incident where rising hydrogen, an active hot-work permit, worker entry into Zone 3, and missing PPE collapse into one 97% explosion-risk assessment with simulated emergency response.
 
-## Project Statistics
+## Project Features & Stack
+
+| Category | Details |
+|----------|---------|
+| **Core Frameworks** | Next.js 15, React, TypeScript, FastAPI, Python, Tailwind CSS |
+| **AI & Orchestration** | LangGraph, Gemini 2.5 Flash, 8 Specialized AI Agents |
+| **Data & Storage** | BM25 RAG Index, SQLite Safety Memory, Knowledge Graph |
+| **Key Architectures** | Digital Twin, Physics Simulation Engine, Emergency Orchestrator |
+| **Testing & Quality** | Playwright (E2E), Vitest (Frontend), Pytest (Backend) |
+
+## Project Structure
 
 ```text
-SentinelAI - AI Chief Safety Officer
-
-Tech Stack
-- Next.js 15
-- React
-- TypeScript
-- FastAPI
-- Python
-- Gemini 2.5 Flash
-- LangGraph
-- SQLite
-- Tailwind CSS
-- WebSockets
-- Playwright
-- Vitest
-- Pytest
-
-Architecture
-- 8 specialized AI agents
-- Digital Twin
-- Knowledge Graph
-- RAG
-- Simulation Engine
-- Safety Memory
-- Emergency Orchestrator
-
-Verification
-- Frontend production build
-- Backend health/API verification
-- 8 backend tests
-- 2 frontend tests
-- 6 end-to-end tests
-- Desktop layout verified
-- Mobile layout verified
+sentinel-ai-safety-platform/
+├── frontend/                 # Next.js 15 UI and Digital Twin Dashboard
+│   ├── app/                  # App router and main pages
+│   ├── components/           # Reusable UI components (Map, Charts, Agents)
+│   ├── e2e/                  # Playwright end-to-end tests
+│   ├── public/               # Static assets (CCTV imagery)
+│   └── lib/                  # API client and TypeScript types
+├── backend/                  # FastAPI & LangGraph Orchestrator
+│   ├── app/
+│   │   ├── main.py           # API routes and WebSocket gateway
+│   │   ├── agents.py         # 8-Agent LangGraph implementation
+│   │   ├── runtime.py        # Safety engine and simulation logic
+│   │   └── store.py          # SQLite, Knowledge Graph, and RAG indexer
+│   ├── data/                 # Local DB and indexed safety documents
+│   └── tests/                # Pytest unit and integration tests
+├── setup.cmd                 # One-click dependency installation script
+└── dev.cmd                   # Runs frontend and backend concurrently
 ```
 
 ## Run Locally
@@ -104,27 +97,27 @@ All calls, dispatches, CCTV detections, drone-style inputs, and emergency action
 
 ```mermaid
 flowchart TD
-    UI[Next.js Command Center]
-    API[FastAPI Gateway]
-    WS[1 Hz WebSocket Stream]
-    Orch[LangGraph Orchestrator]
+    UI["Next.js Command Center"]
+    API["FastAPI Gateway"]
+    WS["1 Hz WebSocket Stream"]
+    Orch["LangGraph Orchestrator"]
 
-    A1[Sensor Intelligence Agent]
-    A2[Computer Vision Agent]
-    A3[Permit Intelligence Agent]
-    A4[Risk Correlation Agent]
-    A5[Incident Prediction Agent]
-    A6[Compliance Agent]
-    A7[Emergency Response Agent]
-    A8[Simulation Agent]
+    A1["Sensor Intelligence Agent"]
+    A2["Computer Vision Agent"]
+    A3["Permit Intelligence Agent"]
+    A4["Risk Correlation Agent"]
+    A5["Incident Prediction Agent"]
+    A6["Compliance Agent"]
+    A7["Emergency Response Agent"]
+    A8["Simulation Agent"]
 
-    DB1[(SQLite Safety Memory)]
-    DB2[(BM25 RAG Index)]
-    DB3[(Knowledge Graph Snapshot)]
-    Report[Incident PDF Report]
+    DB1[("SQLite Safety Memory")]
+    DB2[("BM25 RAG Index")]
+    DB3[("Knowledge Graph Snapshot")]
+    Report["Incident PDF Report"]
 
-    UI <-->|REST| API
-    UI <-->|Telemetry and agent events| WS
+    UI <--> API
+    UI <--> WS
     API --> WS
     API --> Orch
 
