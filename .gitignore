@@ -1,0 +1,15 @@
+node_modules/
+.next/
+dist/
+build/
+.venv/
+.venv2/
+__pycache__/
+*.pyc
+.env
+backend/data/*.db
+backend/data/*.sqlite
+frontend/.env
+backend/.env
+.tempmediaStorage/
+brain/

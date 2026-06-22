@@ -1,0 +1,16 @@
+{
+  "name": "sentinel-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c yellow,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "backend\\.venv2\\Scripts\\python.exe -m uvicorn app.main:app --app-dir backend --reload --port 8000",
+    "dev:web": "npm.cmd --prefix frontend run dev",
+    "build": "npm.cmd --prefix frontend run build",
+    "test": "npm.cmd --prefix frontend run test && backend\\.venv2\\Scripts\\python.exe -m pytest backend/tests -q"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
+
