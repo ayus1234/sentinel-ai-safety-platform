@@ -110,3 +110,68 @@ INFO:     Shutting down
 [API] INFO:     connection closed
 [API] INFO:     127.0.0.1:60801 - "WebSocket /ws/plant" [accepted]
 [API] INFO:     connection open
+[API] WARNING:  WatchFiles detected changes in 'backend\tests\test_api.py'. Reloading...
+[API]  INFO:     127.0.0.1:65259 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     connection open
+[API] INFO:     127.0.0.1:53253 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:53253 - "POST /api/v1/demo/start HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:51895 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     connection closed
+[API] INFO:     127.0.0.1:53327 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:59499 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     connection open
+[API] INFO:     Shutting down
+[API] INFO:     connection closed
+[API] INFO:     connection closed
+[API] INFO:     127.0.0.1:53327 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:52491 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     Waiting for application shutdown.
+[API] INFO:     Application shutdown complete.
+[API] INFO:     Finished server process [10744]
+[API] INFO:     Started server process [10696]
+[API] INFO:     Waiting for application startup.
+[API] INFO:     Application startup complete.
+[API] INFO:     127.0.0.1:53256 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     127.0.0.1:60066 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     connection open
+[API] INFO:     connection open
+[API] INFO:     127.0.0.1:53154 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     connection closed
+[API] INFO:     127.0.0.1:49672 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     connection open
+[API] INFO:     127.0.0.1:60048 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:60048 - "POST /api/v1/demo/start HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:62820 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     connection closed
+[API] INFO:     127.0.0.1:57909 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     connection open
+[API] INFO:     127.0.0.1:62933 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:51108 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:62933 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     connection closed
+[API] INFO:     127.0.0.1:54963 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     connection open
+[API] INFO:     127.0.0.1:55440 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:54444 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:55440 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     connection closed
+[API] INFO:     127.0.0.1:60538 - "WebSocket /ws/plant" [accepted]
+[API] INFO:     connection open
+[API] INFO:     127.0.0.1:63663 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:59642 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:59642 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:55598 - "POST /api/v1/demo/reset HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:55598 - "GET /api/v1/bootstrap HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:60135 - "POST /api/v1/demo/start HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:60952 - "GET /api/v1/memory/graph HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:60952 - "GET /api/v1/memory/graph HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:58106 - "OPTIONS /api/v1/simulations HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:58106 - "POST /api/v1/simulations HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:64965 - "OPTIONS /api/v1/query HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:64965 - "POST /api/v1/query HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:62692 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:60748 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:51649 - "GET /api/v1/memory/graph HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:51649 - "GET /api/v1/memory/graph HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:60422 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
+[API] INFO:     127.0.0.1:65247 - "POST /api/v1/vision/analyze HTTP/1.1" 200 OK
