@@ -1,5 +1,7 @@
 # SentinelAI
 
+![Command Center Dashboard](frontend/public/command_center.png)
+
 SentinelAI is a local-first hackathon MVP for an autonomous industrial safety intelligence platform. It is designed as an AI Chief Safety Officer, not a passive dashboard: eight specialized agents correlate telemetry, CCTV evidence, permit context, safety memory, simulation, compliance, and emergency response into one explainable operational decision.
 
 The centerpiece demo replays a correlated incident where rising hydrogen, an active hot-work permit, worker entry into Zone 3, and missing PPE collapse into one 97% explosion-risk assessment with simulated emergency response.
