@@ -237,7 +237,6 @@ function IncidentsView({ incidents, onAcknowledge }: { incidents: Incident[]; on
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#d9dddf] px-5 py-4">
             <div><div className="mb-1 flex items-center gap-2"><span className="badge critical">{incident.risk_score}% risk</span><span className="text-[10px] font-bold text-[#687176]">{incident.id}</span></div><h2 className="m-0 text-[17px] font-extrabold">{incident.title}</h2></div>
             <div className="flex gap-2">
-              <button className="button-secondary" onClick={async () => { const res = await fetch(api.reportUrl(incident.id)); const blob = await res.blob(); const url = window.URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = `${incident.id}.pdf`; a.click(); setTimeout(() => window.URL.revokeObjectURL(url), 100); }}><Download size={14} /> Report</button>
               <button className="button-primary" onClick={() => onAcknowledge(incident.id)} disabled={incident.status === "acknowledged"}><CheckCircle2 size={14} /> {incident.status === "acknowledged" ? "Acknowledged" : "Acknowledge"}</button>
             </div>
           </div>
