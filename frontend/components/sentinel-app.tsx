@@ -237,7 +237,7 @@ function IncidentsView({ incidents, onAcknowledge }: { incidents: Incident[]; on
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#d9dddf] px-5 py-4">
             <div><div className="mb-1 flex items-center gap-2"><span className="badge critical">{incident.risk_score}% risk</span><span className="text-[10px] font-bold text-[#687176]">{incident.id}</span></div><h2 className="m-0 text-[17px] font-extrabold">{incident.title}</h2></div>
             <div className="flex gap-2">
-              <a className="button-secondary no-underline" href={api.reportUrl(incident.id)} download><Download size={14} /> Report</a>
+              <button className="button-secondary" onClick={async () => { const res = await fetch(api.reportUrl(incident.id)); const blob = await res.blob(); const url = window.URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = `${incident.id}.pdf`; a.click(); window.URL.revokeObjectURL(url); }}><Download size={14} /> Report</button>
               <button className="button-primary" onClick={() => onAcknowledge(incident.id)} disabled={incident.status === "acknowledged"}><CheckCircle2 size={14} /> {incident.status === "acknowledged" ? "Acknowledged" : "Acknowledge"}</button>
             </div>
           </div>
@@ -391,7 +391,7 @@ export function SentinelApp() {
       <main className="main-shell">
         <header className="topbar">
           <div className="flex min-w-0 items-center gap-3"><currentTab.icon size={18} className="text-[#087e8b]" /><div><div className="truncate text-[14px] font-extrabold">{currentTab.label}</div><div className="plant-location text-[10px] font-semibold text-[#687176]">{snapshot.plant.name} - {snapshot.plant.location}</div></div></div>
-          <div className="flex items-center gap-3"><span className={`badge ${snapshot.plant.status === "critical" ? "critical" : "safe"}`}>{snapshot.plant.status}</span><button className="icon-button" title="Notifications" aria-label="Notifications"><Bell size={16} />{snapshot.incidents.some((item) => item.status === "active") && <span className="absolute mt-[-22px] ml-[22px] h-2 w-2 rounded-full bg-[#d92d20]" />}</button></div>
+          <div className="flex items-center gap-3"><span className={`badge ${snapshot.plant.status === "critical" ? "critical" : "safe"}`}>{snapshot.plant.status}</span><button className="icon-button" onClick={() => setActiveTab("incidents")} title="Notifications" aria-label="Notifications"><Bell size={16} />{snapshot.incidents.some((item) => item.status === "active") && <span className="absolute mt-[-22px] ml-[22px] h-2 w-2 rounded-full bg-[#d92d20]" />}</button></div>
         </header>
         <div className="command-strip"><VoiceCommand risk={snapshot.risk.score} onNavigate={(tab) => setActiveTab(tab as TabId)} /></div>
         <nav className="mobile-nav" aria-label="Mobile navigation">{tabs.slice(0, 5).map((tab) => { const Icon = tab.icon; return <button key={tab.id} className={activeTab === tab.id ? "active" : ""} onClick={() => setActiveTab(tab.id)} aria-label={tab.label} title={tab.label}><Icon size={19} /></button>; })}</nav>
