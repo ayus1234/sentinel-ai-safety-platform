@@ -237,7 +237,7 @@ function IncidentsView({ incidents, onAcknowledge }: { incidents: Incident[]; on
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#d9dddf] px-5 py-4">
             <div><div className="mb-1 flex items-center gap-2"><span className="badge critical">{incident.risk_score}% risk</span><span className="text-[10px] font-bold text-[#687176]">{incident.id}</span></div><h2 className="m-0 text-[17px] font-extrabold">{incident.title}</h2></div>
             <div className="flex gap-2">
-              <a className="button-secondary no-underline" href={api.reportUrl(incident.id)} target="_blank" rel="noreferrer"><Download size={14} /> Report</a>
+              <a className="button-secondary no-underline" href={api.reportUrl(incident.id)} download><Download size={14} /> Report</a>
               <button className="button-primary" onClick={() => onAcknowledge(incident.id)} disabled={incident.status === "acknowledged"}><CheckCircle2 size={14} /> {incident.status === "acknowledged" ? "Acknowledged" : "Acknowledge"}</button>
             </div>
           </div>
